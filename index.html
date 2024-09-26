@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="US-en">
+<head>
+  <meta charset="UTF-8">
+  <title>Setting-page</title>
+  <style>
+  body{
+    padding:0;
+    margin:0;
+  }
+    nav{
+      background:black;
+      width:100%;
+      padding:0;
+      margin:0;
+      height:100px;
+      display:flex;
+      position:absolute;
+    }
+  #setting-sym{
+    color:white;
+    font-size:70px;
+    padding:0;
+    margin:0;
+    postion:relative;
+  }
+  #setting-tabs-box{
+    width:26%;
+    height:270px;
+    background:black;
+    position:relative;
+    left:20px;
+    top:100px;
+    display:none;
+  }
+  .setting-buttons:hover{
+    background:red;
+  }
+  #setting-sym:hover + #setting-tabs-box{
+    display:block;
+  }
+  #setting-tabs-box:hover{
+    display:block;
+  }
+  
+  .setting-buttons{
+    background:black;
+    color:white;
+    width:100%;
+    height:33.33%;
+    font-size:30px;
+    border:none;
+  }
+  #color-box1{
+    position:absolute;
+    width:100%;
+    height:240px;
+    left:252px;
+    top:10px;
+    display:none;
+  }
+  #color-box2{
+    position:absolute;
+    width:100%;
+    height:240px;
+    left:252px;
+    top:140px;
+    display:none;
+  }
+  #color-box3{
+    position:absolute;
+    width:100%;
+    height:240px;
+    left:252px;
+    top:240;
+    display:none;
+  }
+  
+  
+#menu-thm:hover + #color-box1{
+  display:block;
+}
+#color-box1:hover{
+  display:block;
+}
+  
+#page-thm:hover + #color-box2{
+  display:block;
+}
+#color-box2:hover{
+  display:block;
+}
+  
+#menu-thm:hover + #color-box1{
+  display:block;
+}
+#color-box1:hover{
+  display:block;
+}
+  
+#font-col:hover + #color-box3{
+  display:block;
+}
+#color-box3:hover{
+  display:block;
+}  
+  
+ #page{
+   width:100%;
+   height:1800px;
+   float:left;
+   margin-top:59px;
+ } 
+  #wel{
+    font-size:65px;
+    text-align:center;
+  }
+  h2{
+     margin-top:1280px;
+    position:fixed;
+    top:200px;
+    right:4px;
+   }
+  
+ @media only screen and (max-width:600px){
+   nav{
+     height:40px;
+   }
+   #setting-sym{
+     font-size:25px;
+   }
+   #setting-tabs-box{
+     height:100px;
+     width:35%;
+     top:10px;
+    left:0px;
+   }
+   .setting-buttons{
+     font-size:13px;
+   }
+  #color-box1{
+    height:80px;
+    left:113px;
+    top:40px;
+  } 
+   #color-box2{
+    height:80px;
+    left:113px;
+    top:60px;
+  } 
+   #color-box3{
+    height:80px;
+    left:113px;
+    top:80px;
+  } 
+   #page{
+     margin-top:40px;
+   }
+   #wel{
+     margin:0;
+     font-size:16px;
+   }
+   h2{
+     margin-top:290px;
+     font-size:10px;
+   }
+   #page{
+     height:580px;
+   }
+ } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+  <nav id="nav-">
+    <h1 id="setting-sym">&#9881;</h1>
+    <div id="setting-tabs-box">
+      <button class="setting-buttons" id="menu-thm" >Menu-bar Theme</button>
+        <div id="color-box1">
+          <button class="setting-buttons" id="red-m1" onclick="a1()">Red</button>
+          <button class="setting-buttons" id="green-m1" onclick="a2()">Green</button>
+          <button class="setting-buttons" id="blue-m1" onclick="a3()">Blue</button>
+          <button class="setting-buttons" id="yellow-m1" onclick="a4()">Yellow</button>
+          <button class="setting-buttons" id="grey-m1" onclick="a5()">Grey</button>
+        </div>
+
+      <button class="setting-buttons" id="page-thm">Page Theme</button>
+      <div id="color-box2">
+          <button class="setting-buttons" id="red-m2" onclick="b1()">Red</button>
+          <button class="setting-buttons" id="green-m2" onclick="b2()">Green</button>
+          <button class="setting-buttons" id="blue-m2" onclick="b3()">Blue</button>
+          <button class="setting-buttons" id="yellow-m2" onclick="b4()">Yellow</button>
+          <button class="setting-buttons" id="grey-m2" onclick="b5()" >Grey</button>
+        </div>
+      
+      <button class="setting-buttons" id="font-col">Font Color</button>
+      <div id="color-box3">
+          <button class="setting-buttons" id="red-m3" onclick="c1()">Red</button>
+          <button class="setting-buttons" id="green-m3" onclick="c2()" >Green</button>
+          <button class="setting-buttons" id="blue-m3" onclick="c3()">Blue</button>
+          <button class="setting-buttons" id="yellow-m3" onclick="c4()">Yellow</button>
+          <button class="setting-buttons" id="grey-m3" onclick="c5()">Grey</button>
+        </div>
+    </div>
+  </nav>
+  <div id="page">
+    <h1 id="wel">Welcome!</h1>
+    <h2>Developed-by: Mr. Vineet</h2>
+  </div>
+  
+  
+  <script>
+  var a, b, c;
+  
+  
+  a=document.getElementById("nav-").style;
+  function a1(){
+    a.background="red";
+  }
+  function a2(){
+    a.background="green";
+  }
+  function a3(){
+    a.background="blue";
+  }
+  function a4(){
+    a.background="yellow";
+  }
+  function a5(){
+    a.background="grey";
+  }
+  
+  
+ b=document.getElementById("page").style;
+  function b1(){
+    b.background="red";
+  }
+  function b2(){
+    b.background="green";
+  }
+  function b3(){
+    b.background="blue";
+  }
+  function b4(){
+    b.background="yellow";
+  }
+  function b5(){
+    b.background="grey";
+  } 
+  
+  
+ c=document.getElementsByTagName("BODY")[0].style;
+  function c1(){
+    c.color="red";
+  }
+  function c2(){
+    c.color="green";
+  }
+  function c3(){
+    c.color="blue";
+  }
+  function c4(){
+    c.color="yellow";
+  }
+  function c5(){
+    c.color="grey";
+  }  
+  
+  
+  
+  
+  </script>  
+  
+  
+</body>
+</html>
